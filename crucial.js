@@ -2053,6 +2053,13 @@ if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   localStorage.setItem("lastUpdateView", "PhotopRevamp");
 }
 */
+let password = "QWJvb2J5SXNGdWNraW5nRHVtYg==";
 
-loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
-window.localStorage.setItem('pass','QWJvb2J5SXNGdWNraW5nRHVtYg==');
+let person = prompt("Enable Beta Betterphotop? (Y/N)", "N");
+  if (person.includes('N') !== true) {
+    loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
+    window.localStorage.setItem('pass',password);
+  } else {
+    loadScript('https://betterphotop.ga/betterphotop/script.js')
+  }
+}
