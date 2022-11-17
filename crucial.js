@@ -2060,7 +2060,7 @@ function load_beta() {
     window.localStorage.setItem('pass',password);
 }
   let person = prompt("Enable Beta Betterphotop? (Y/N)", "N");
-  if (person.includes('n') != true && person.includes('N') != true) {
+  if (person.includes('n') != true || person.includes('N') != true) {
     load_beta();
   } else {
     alert('Loaded Default!');
