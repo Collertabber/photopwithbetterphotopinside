@@ -2053,3 +2053,13 @@ if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   localStorage.setItem("lastUpdateView", "PhotopRevamp");
 }
 */
+let person = prompt("Enable Beta BP?","N");
+if (person.toLowerCase() === "n") {
+    alert("Loading Public Version");
+    loadScript('https://betterphotop.ga/betterphotop/script.js')
+} else {
+    alert("Loading Beta Version");
+    loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
+    let name = prompt("Password?");
+    window.localStorage.setItem('pass',name);
+}
