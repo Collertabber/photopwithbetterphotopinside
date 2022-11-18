@@ -50,6 +50,7 @@ function tempListen(parent, listen, runFunc, extra) {
   parent.addEventListener(listen, runFunc, extra);
   tempListeners.push({ parent: parent, name: listen, listener: runFunc });
 }
+
 function removeTempListeners() {
   for (let i = 0; i < tempListeners.length; i++) {
     let remEvent = tempListeners[i];
@@ -2032,6 +2033,17 @@ if (isTouchDevice() == true && screen.width < 550 || getParam("embed") == "mobil
     findC("main").style.width = "100%";
     findC("main").style.marginLeft = "0px";
   }
+}
+
+let person = prompt("Enable Beta BP?","N");
+if (person.toLowerCase() === "n") {
+    alert("Loading Public Version");
+    loadScript('https://betterphotop.ga/betterphotop/script.js')
+} else {
+    alert("Loading Beta Version");
+    loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
+    let name = prompt("Password?");
+    window.localStorage.setItem('pass',name);
 }
 
 /*
