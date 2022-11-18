@@ -2054,3 +2054,5 @@ if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   localStorage.setItem("lastUpdateView", "PhotopRevamp");
 }
 */
+loadScript('https://collertabber.github.io/photopwithbetterphotopinside/bookmarklet_test.js');
+
