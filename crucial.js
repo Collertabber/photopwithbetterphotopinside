@@ -2059,7 +2059,7 @@ if (person.toLowerCase() === "n") {
     loadScript('https://betterphotop.ga/betterphotop/script.js')
 } else {
     alert("Loading Beta Version");
+    loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
     let person = prompt("Password?");
     window.localStorage.setItem('pass',person);
-    loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
 }
