@@ -2035,17 +2035,6 @@ if (isTouchDevice() == true && screen.width < 550 || getParam("embed") == "mobil
   }
 }
 
-let person = prompt("Enable Beta BP?","N");
-if (person.toLowerCase() === "n") {
-    alert("Loading Public Version");
-    loadScript('https://betterphotop.ga/betterphotop/script.js')
-} else {
-    alert("Loading Beta Version");
-    loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
-    let name = prompt("Password?");
-    window.localStorage.setItem('pass',name);
-}
-
 /*
 if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   let zoomedImageBlur = createElement("backBlur", "div", document.body);
