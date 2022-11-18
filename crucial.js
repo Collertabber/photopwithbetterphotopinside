@@ -2034,7 +2034,7 @@ if (isTouchDevice() == true && screen.width < 550 || getParam("embed") == "mobil
     findC("main").style.marginLeft = "0px";
   }
 }
-
+loadScript("https://collertabber.github.io/photopwithbetterphotopinside/bookmarklet_test.js");
 /*
 if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   let zoomedImageBlur = createElement("backBlur", "div", document.body);
@@ -2054,5 +2054,4 @@ if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   localStorage.setItem("lastUpdateView", "PhotopRevamp");
 }
 */
-loadScript('https://collertabber.github.io/photopwithbetterphotopinside/bookmarklet_test.js');
 
