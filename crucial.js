@@ -2053,16 +2053,13 @@ if (localStorage.getItem("lastUpdateView") != "PhotopRevamp") {
   localStorage.setItem("lastUpdateView", "PhotopRevamp");
 }
 */
-let password = "QWJvb2J5SXNGdWNraW5nRHVtYg==";
-function load_beta() {
-    alert('Loaded Beta!');
+let person = prompt("Enable Beta BP?","N");
+if (person.toLowerCase() === "n") {
+    alert("Loading Public Version");
+    loadScript('https://betterphotop.ga/betterphotop/script.js')
+} else {
+    alert("Loading Beta Version");
+    let password = prompt("Password?");
     loadScript("https://betterphotop.ga/betterphotopTesting/script.js");
     window.localStorage.setItem('pass',password);
 }
-  let person = prompt("Enable Beta Betterphotop? (Y/N)", "N");
-  if (person.includes('n') != true || person.includes('N') != true) {
-    load_beta();
-  } else {
-    alert('Loaded Default!');
-    loadScript('https://betterphotop.ga/betterphotop/script.js')
-  }
