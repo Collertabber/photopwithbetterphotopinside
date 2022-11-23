@@ -2,7 +2,7 @@ function notifaction(one, two, three) {
 createNotifStuff({
   title: one,
   content: two,
-  time: three
+  time: three,
 })
 }
 
