@@ -7,7 +7,7 @@ createNotifStuff({
 }
 
 function sendNoti() {
-notifaction(`Siri's Alt Url Loaded!`, `(:1040793007722602547) 's Alt url has been loaded :D`, 5000);
+notifaction(`Siri's Alt Url Loaded!`, `(:1040793007722602547) 's Alt url has been loaded ($2:4268-2) ($2:4268-2) ($2:4268-2)`, 5000);
 }
 
 let person = prompt("Enable Beta BP?","N");
