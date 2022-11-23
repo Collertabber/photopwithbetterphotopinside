@@ -17,7 +17,7 @@ if (person == "n") {
     alert("Loading Public Version");
     setTimeout(sendNoti, 4000);
 } else {
-    loadScript("https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js");
+    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
     alert("Loading Beta Version");
     let name = prompt("Password?");
     if (name != null) {
