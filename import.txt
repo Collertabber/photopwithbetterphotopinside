@@ -22,7 +22,7 @@
         color: "white",
         transform: "scale(0.9)",
         opacity: "0"
-        }
+        })
 theNotifHolder.addEventListener("click", function (e) {
         if (e.ctrlKey) {
             if (config.type == 'nohide') return;
