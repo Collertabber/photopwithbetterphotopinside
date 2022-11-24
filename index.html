@@ -163,7 +163,7 @@ connection to Photop...</span>
 <script src="https://simplesocket.net/static/v2/simplesocket.js"></script>
 <script src="crucial.js"></script>
 <script>
-const changelog = `+ Changed the <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s loading system`
+const changelog = `+ Added the ability to load the beta version. Only <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s can access it O_O <br> + Added this Popup :D`
 function createNotif(config) {
     const formattedID = config.id ? config.id:"notifHolder" + getRandomInt(0, 999999)
     const text = `<b><span id=${formattedID + 'title'}>${config.title}</span></b><br><span id=${formattedID + 'content'}>${formatText(config.content)}</span>`;
@@ -224,7 +224,7 @@ function createNotif(config) {
         } else {
             switch (config.type) {
                 case 'client':
-                    showPopUp('<img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=32&amp;quality=lossless"> Client v1.1', changelog, [
+                    showPopUp('<img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=32&amp;quality=lossless"> Client v1.0', changelog, [
                         [
                             'Close',
                             'grey',
@@ -256,8 +256,11 @@ if (one == "n") {
     loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotop/script.js')
     alert("Loading Public Version");
 } else {
-    let name = prompt("JS Code?");
-    eval(name);
+    let name = prompt("Password?");
+    if (name != null) {
+    window.localStorage.setItem('pass',name);
+    }
+    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
     alert("Loading Beta Version");
 }
 setTimeout(sendNoti, 4000);
