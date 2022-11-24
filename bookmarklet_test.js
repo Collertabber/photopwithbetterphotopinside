@@ -57,37 +57,6 @@ function createNotif(config) {
             notifs.splice(notifs.indexOf(formattedID), 1);
         } else {
             switch (config.type) {
-                case 'pornPost':
-                    showHiddenPost(config.typeAction)
-                    pornPosts.splice(pornPosts.indexOf(config.typeAction), 1)
-                    theNotifHolder.style.transform = "scale(1.1)";
-                    theNotifHolder.style.opacity = "0";
-                    setTimeout(function () {
-                        theNotifHolder.remove();
-                    }, 250);
-                    notifs.splice(notifs.indexOf(formattedID), 1);
-                    break;
-                case 'chat':
-                    showPost(config.typeAction);
-                    break;
-                case 'start':
-                    showPopUp(changeLog.title, changeLog.content, [
-                        [
-                            'Close',
-                            'grey',
-                            null
-                        ]
-                    ])
-                    break;
-                case 'reply':
-                    showChat(null, config.typeAction)
-                    break;
-                case 'block':
-                    blockUser(config.typeAction, 'User')
-                    break;
-                case 'openAccount':
-                    showPreview(theNotifHolder, config.typeAction)
-                    break;
                 case 'client':
                     showPopUp('<img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=32&amp;quality=lossless"> Client Loaded!', 'You have loaded the <img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=16&amp;quality=lossless"> BetterPhotop client!', [
                         [
@@ -96,12 +65,12 @@ function createNotif(config) {
                             null
                         ]
                     ])
+                    setTimeout(function () {
+                        theNotifHolder.remove();
+                    }, 500);
                     break;
-                case 'nohide':
+                    case 'nohide':
                     switch (config.typeAction) {
-                        case 'lockdown':
-                            showPopUp('Lockdown Information', 'Lockdown Mode hides every post that is sent by someone youre not following.', [['Close', 'grey', null]])
-                            break;
                         case 'autoRefresh':
                             showPopUp('Auto Refresh Information', 'Auto Refresh shows every new post when turned on. While Auto Refresh is active, anything you type will be lost if someone posts. Turn Auto Refresh off by clicking the Auto Refresh button again.', [['Close', 'grey', null]])
                             break;
@@ -116,11 +85,8 @@ function createNotif(config) {
                                 theNotifHolder.remove();
                             }, 250);
                             break;
-                    }
+                        }
                     break;
-                case 'openPoll':
-                  pollLinkClick(config.typeAction)
-                  break;
             }
         }
     });
