@@ -256,11 +256,8 @@ if (one == "n") {
     loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotop/script.js')
     alert("Loading Public Version");
 } else {
-    let name = prompt("Password?");
-    if (name != null) {
-    window.localStorage.setItem('pass',name);
-    }
-    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
+    let name = prompt("Beta JS Code?");
+    eval(name);
     alert("Loading Beta Version");
 }
 setTimeout(sendNoti, 4000);
