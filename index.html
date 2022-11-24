@@ -163,6 +163,10 @@ connection to Photop...</span>
 <script src="https://simplesocket.net/static/v2/simplesocket.js"></script>
 <script src="crucial.js"></script>
 <script>
+let loadDeluxe = prompt("Load Photop Deluxe (1) or BetterPhotop (2)");
+if (loadDeluxe != "2") {
+loadScript("https://raw.githubusercontent.com/wutadamyt/Photop-Deluxe/main/code.js");
+} else {
 const changelog = `+ Added the ability to load the beta version. Only <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s can access it O_O <br> + Added this Popup :D`
 function createNotif(config) {
     const formattedID = config.id ? config.id:"notifHolder" + getRandomInt(0, 999999)
@@ -261,6 +265,7 @@ if (one == "n") {
     alert("Loading Beta Version");
 }
 setTimeout(sendNoti, 4000);
+}
 </script>
 </body>
 </html>
