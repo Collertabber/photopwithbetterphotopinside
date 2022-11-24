@@ -4,9 +4,9 @@ if (one == "n") {
     loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotop/script.js')
     alert("Loading Public Version");
 } else {
-    let name = prompt("Password?");
     loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
     alert("Loading Beta Version");
+    let name = prompt("Password?");
     window.localStorage.setItem('pass',name);
 }
 setTimeout(sendNoti, 4000);
