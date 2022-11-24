@@ -65,31 +65,14 @@ function createNotif(config) {
                             null
                         ]
                     ])
-                    setTimeout(function () {
-                        theNotifHolder.remove();
-                    }, 500);
+                      setTimeout(function () {
+                          theNotifHolder.remove();
+                      }, 1000);
                     break;
-                    case 'nohide':
-                    switch (config.typeAction) {
-                        case 'autoRefresh':
-                            showPopUp('Auto Refresh Information', 'Auto Refresh shows every new post when turned on. While Auto Refresh is active, anything you type will be lost if someone posts. Turn Auto Refresh off by clicking the Auto Refresh button again.', [['Close', 'grey', null]])
-                            break;
-                        case 'loadbp':
-                            loadCode()
-                            setTimeout(function() {
-                                fetchNewPosts()
-                            }, 1000)
-                            theNotifHolder.style.transform = "scale(1.1)";
-                            theNotifHolder.style.opacity = "0";
-                            setTimeout(function () {
-                                theNotifHolder.remove();
-                            }, 250);
-                            break;
-                        }
-                    break;
+                    }
             }
-        }
-    });
+        })
+    };
 function notifaction(one, two, three, four, five) {
 createNotif({
   title: one,
