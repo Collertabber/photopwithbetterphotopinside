@@ -1,3 +1,4 @@
+const changelog = `+ Added the ability to load the beta version. Only <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s can access <br> + Added this Popup :D`
 function createNotif(config) {
     const formattedID = config.id ? config.id:"notifHolder" + getRandomInt(0, 999999)
     const text = `<b><span id=${formattedID + 'title'}>${config.title}</span></b><br><span id=${formattedID + 'content'}>${formatText(config.content)}</span>`;
@@ -58,16 +59,14 @@ function createNotif(config) {
         } else {
             switch (config.type) {
                 case 'client':
-                    showPopUp('<img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=32&amp;quality=lossless"> Client Loaded!', 'You have loaded the <img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=16&amp;quality=lossless"> BetterPhotop client!', [
+                    showPopUp('<img onclick="navigator.clipboard.writeText(`1040793007722602547`)" title="Discord emoji | 1040793007722602547" src="https://cdn.discordapp.com/emojis/1040793007722602547?size=32&amp;quality=lossless"> Client v1.0', changelog, [
                         [
                             'Close',
                             'grey',
                             null
                         ]
                     ])
-                      setTimeout(function () {
-                          theNotifHolder.remove();
-                      }, 1000);
+                        theNotifHolder.remove();
                     break;
                     }
             }
@@ -92,13 +91,12 @@ person = person.toLowerCase();
 if (person == "n") {
     loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotop/script.js')
     alert("Loading Public Version");
-    setTimeout(sendNoti, 4000);
 } else {
     loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
     alert("Loading Beta Version");
     let name = prompt("Password?");
     if (name != null) {
     window.localStorage.setItem('pass',name);
-    setTimeout(sendNoti, 4000);
     }
 }
+setTimeout(sendNoti, 4000);
