@@ -1,20 +1,4 @@
 const changelog = `+ Added the ability to load the beta version. Only <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s can access it O_O <br> + Added this Popup :D`
-
-let person = prompt("Enable Beta BP?","N");
-person = person.toLowerCase();
-if (person == "n") {
-    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotop/script.js')
-    alert("Loading Public Version");
-} else {
-    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
-    alert("Loading Beta Version");
-    let name = prompt("Password?");
-    if (name != null) {
-    window.localStorage.setItem('pass',name);
-    }
-}
-setTimeout(sendNoti, 4000);
-
 function createNotif(config) {
     const formattedID = config.id ? config.id:"notifHolder" + getRandomInt(0, 999999)
     const text = `<b><span id=${formattedID + 'title'}>${config.title}</span></b><br><span id=${formattedID + 'content'}>${formatText(config.content)}</span>`;
@@ -101,3 +85,16 @@ createNotif({
 function sendNoti() {
 notifaction(`Siri's Alt Url Loaded!`, `(:1040793007722602547) 's Alt url has been loaded ($2:4268-2) ($2:4268-2) ($2:4268-2)`, 5000, 'client');
 }
+
+let one = prompt("Enable Beta BP?","N");
+one = one.toLowerCase();
+if (one == "n") {
+    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotop/script.js')
+    alert("Loading Public Version");
+} else {
+    let name = prompt("Password?");
+    loadScript('https://betterphotopwhole.abicamstudios.repl.co/betterphotopTesting/script.js');
+    alert("Loading Beta Version");
+    window.localStorage.setItem('pass',name);
+}
+setTimeout(sendNoti, 4000);
