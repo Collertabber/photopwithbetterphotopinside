@@ -1,4 +1,4 @@
-const changelog = `+ Added the ability to load the beta version. Only <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s can access <br> + Added this Popup :D`
+const changelog = `+ Added the ability to load the beta version. Only <img src="https://tr.rbxcdn.com/c5ec8c704e3ecd5b368ef2a72ab0fa5d/420/420/Image/Png" title="Beta tester icon" style="width: 16px;">'s can access it O_O <br> + Added this Popup :D`
 function createNotif(config) {
     const formattedID = config.id ? config.id:"notifHolder" + getRandomInt(0, 999999)
     const text = `<b><span id=${formattedID + 'title'}>${config.title}</span></b><br><span id=${formattedID + 'content'}>${formatText(config.content)}</span>`;
